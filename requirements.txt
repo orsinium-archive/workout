@@ -1,0 +1,6 @@
+crontab                     # https://github.com/josiahcarlson/parse-crontab
+django                      # https://github.com/django/django
+djangorestframework         # https://github.com/encode/django-rest-framework
+djangorestframework-jwt     # https://github.com/GetBlimp/django-rest-framework-jwt
+python-dateutil             # https://github.com/dateutil/dateutil
+pytz                        # http://pytz.sourceforge.net/
