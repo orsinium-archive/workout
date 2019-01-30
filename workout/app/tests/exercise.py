@@ -6,7 +6,7 @@ from rest_framework import status
 from .mixins import JWTMixin
 
 
-class UserTests(JWTMixin, TestCase):
+class ExerciseTests(JWTMixin, TestCase):
     def test_list(self):
         # check list
         response = self.client.get('/api/v1/exercises/')
@@ -29,10 +29,10 @@ class UserTests(JWTMixin, TestCase):
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
         # get info
-        exercise_id = response.data[0]['id']
+        exercise_id = response.data['id']
         response = self.client.get('/api/v1/exercises/{}/'.format(exercise_id))
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        self.assertEqual(response.data['username'], self.username)
+        self.assertEqual(response.data['name'], 'running')
 
     def test_add(self):
         # add
@@ -55,7 +55,7 @@ class UserTests(JWTMixin, TestCase):
         self.assertEqual(len(response.data), 1)
 
         # delete
-        exercise_id = response.data['id']
+        exercise_id = response.data[0]['id']
         response = self.client.delete('/api/v1/exercises/{}/'.format(exercise_id))
         self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
 
