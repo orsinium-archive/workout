@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # apps
-    'app',
+    'workout.app',
 
     # third-party
     'rest_framework',
@@ -87,7 +87,7 @@ DATABASES = {
     }
 }
 
-AUTH_USER_MODEL = 'workout.app.models.User'
+AUTH_USER_MODEL = 'app.User'
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators

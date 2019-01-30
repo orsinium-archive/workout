@@ -17,4 +17,4 @@ class Plan(models.Model):
 
 
 class User(AbstractUser):
-    plan = models.ForeignKey(Plan)
+    plan = models.ForeignKey(Plan, on_delete=models.SET_NULL, null=True, default=None)
