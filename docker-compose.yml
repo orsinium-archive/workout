@@ -1,0 +1,18 @@
+version: '3'
+services:
+
+  workout-postgres:
+    container_name: workout-postgres
+    image: postgres:9.6
+    environment:
+      POSTGRES_USER: dev
+      POSTGRES_PASSWORD: "Th!sI5N0t4Produc7ion!"
+      POSTGRES_DB: workout
+
+  workout-project:
+    container_name: workout-project
+    build: .
+    volumes:
+      - .:/opt/project
+    depends_on:
+      - workout-postgres
