@@ -2,7 +2,7 @@
 import os
 import sys
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'project.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'workout.project.settings')
 
 
 SNAKE = r"""
@@ -28,4 +28,5 @@ SNAKE = r"""
 
 def manage():
     from django.core.management import execute_from_command_line
+    print(SNAKE)
     execute_from_command_line(sys.argv)

@@ -3,3 +3,4 @@ __pycache__/
 *.sqlite?
 project/settings/local.py
 .mypy_cache/
+*.egg-info/
