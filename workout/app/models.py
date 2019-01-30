@@ -1,5 +1,6 @@
-from django.db import models
+# external
 from django.contrib.auth.models import AbstractUser
+from django.db import models
 
 
 class Exercise(models.Model):

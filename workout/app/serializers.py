@@ -1,4 +1,7 @@
+# external
 from rest_framework import serializers
+
+# app
 from . import models
 
 

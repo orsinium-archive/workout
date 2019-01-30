@@ -1,10 +1,15 @@
-from .. import models
-from django.test import TestCase
-from django.shortcuts import resolve_url
-from rest_framework.test import APIClient
-from rest_framework import status
-from rest_framework_jwt.utils import jwt_decode_handler
+# built-in
 from time import sleep
+
+# external
+from django.shortcuts import resolve_url
+from django.test import TestCase
+from rest_framework import status
+from rest_framework.test import APIClient
+from rest_framework_jwt.utils import jwt_decode_handler
+
+# app
+from .. import models
 
 
 class JWTTests(TestCase):

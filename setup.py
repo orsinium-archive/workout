@@ -1,4 +1,6 @@
+# external
 from setuptools import setup
+
 
 reqs = open('requirements.txt').read().split('\n')
 reqs = [req.split()[0] for req in reqs if req.split() and req[0] != '#']

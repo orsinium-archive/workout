@@ -1,8 +1,11 @@
-from .. import models
+# external
 from django.shortcuts import resolve_url
-from rest_framework.test import APIClient
 from rest_framework import status
+from rest_framework.test import APIClient
 from rest_framework_jwt.settings import api_settings
+
+# app
+from .. import models
 
 
 class JWTMixin:

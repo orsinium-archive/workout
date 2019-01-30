@@ -1,6 +1,8 @@
+# external
 from rest_framework import viewsets
-from . import models
-from . import serializers
+
+# app
+from . import models, serializers
 
 
 class ExerciseViewSet(viewsets.ModelViewSet):

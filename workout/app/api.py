@@ -1,5 +1,7 @@
+# external
 from rest_framework import routers
 
+# app
 from . import views
 
 

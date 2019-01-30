@@ -1,7 +1,8 @@
+# external
+from django.urls import include, path
 from rest_framework_jwt import views as jwt
 
-from django.urls import include, path
-
+# app
 from .api import router
 
 

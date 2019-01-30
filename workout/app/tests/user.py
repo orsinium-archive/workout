@@ -1,5 +1,8 @@
+# external
 from django.test import TestCase
 from rest_framework import status
+
+# app
 from .mixins import JWTMixin
 
 
