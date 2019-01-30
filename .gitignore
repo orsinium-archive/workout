@@ -1,6 +1,9 @@
-.vscode/
 __pycache__/
 *.sqlite?
 project/settings/local.py
+
+.vscode/
 .mypy_cache/
+.tox/
+
 *.egg-info/

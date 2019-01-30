@@ -1,5 +1,5 @@
 # external
-from setuptools import setup
+from setuptools import setup, find_packages
 
 
 reqs = open('requirements.txt').read().split('\n')
@@ -10,9 +10,10 @@ name = 'workout'
 setup(
     name=name,
     install_requires=reqs,
+    packages=find_packages(),
     entry_points={
         'console_scripts': [
             name + ' = workout:manage',
         ],
-    }
+    },
 )

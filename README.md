@@ -13,8 +13,8 @@
 
 ## Run tests
 
-```
-sudo docker-compose run workout-project test
+```bash
+sudo docker-compose run --entrypoint tox workout-project
 ```
 
 ## TODO
