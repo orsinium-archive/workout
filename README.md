@@ -16,3 +16,9 @@
 ```
 sudo docker-compose run workout-project test
 ```
+
+## TODO
+
+1. i18n
+1. docs
+1. docstrings
