@@ -26,3 +26,19 @@ class UserTests(JWTMixin, TestCase):
         response = self.client.get('/api/v1/users/')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(len(response.data), 2)
+
+    def test_delete(self):
+        response = self.client.post('/api/v1/users/', data=dict(
+            username='lol',
+            password='TestMeAgain',
+            email='lol@example.com',
+        ))
+        self.assertEqual(response.status_code, status.HTTP_201_CREATED)
+
+        user_id = response.data['id']
+        response = self.client.delete('/api/v1/users/{}/'.format(user_id))
+        self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
+
+        response = self.client.get('/api/v1/users/')
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(len(response.data), 1)
