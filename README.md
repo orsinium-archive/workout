@@ -11,4 +11,8 @@
     ```
 3. Open API: [127.0.0.1:1337/api/v1/](http://127.0.0.1:1337/api/v1/)
 
-## Make requests
+## Run tests
+
+```
+sudo docker-compose run workout-project test
+```

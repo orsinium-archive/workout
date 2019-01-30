@@ -7,7 +7,7 @@ COPY ./setup.py           /opt/project/
 COPY ./requirements.txt   /opt/project/
 
 WORKDIR /opt/project
-RUN pip install -U pip
+RUN pip install -U pip tox
 RUN pip install -e .
 
 ENV DJANGO_SETTINGS_MODULE "workout.settings"
