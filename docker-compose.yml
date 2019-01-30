@@ -14,5 +14,7 @@ services:
     build: .
     volumes:
       - .:/opt/project
+    ports:
+      - 127.0.0.1:1337:1337
     depends_on:
       - workout-postgres

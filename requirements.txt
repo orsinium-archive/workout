@@ -2,5 +2,6 @@ crontab                     # https://github.com/josiahcarlson/parse-crontab
 django                      # https://github.com/django/django
 djangorestframework         # https://github.com/encode/django-rest-framework
 djangorestframework-jwt     # https://github.com/GetBlimp/django-rest-framework-jwt
+psycopg2-binary             # http://initd.org/psycopg/docs/install.html#binary-install-from-pypi
 python-dateutil             # https://github.com/dateutil/dateutil
 pytz                        # http://pytz.sourceforge.net/

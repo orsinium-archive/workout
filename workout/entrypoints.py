@@ -1,30 +1,19 @@
 #!/usr/bin/env python
 import sys
 
-SNAKE = r"""
-           /^\/^\
-         _|__|  O|
-\/     /~     \_/ \
- \____|__________/  \
-        \_______      \
-                `\     \                 \
-                  |     |                  \
-                 /      /                    \
-                /     /                       \\
-              /      /                         \ \
-             /     /                            \  \
-           /     /             _----_            \   \
-          /     /           _-~      ~-_         |   |
-         (      (        _-~    _--_    ~-_     _/   |
-          \      ~-____-~    _-~    ~-_    ~-_-~    /
-            ~-_           _-~          ~-_       _-~
-               ~--______-~                ~-___-~
+PROMPT = r"""
+  _     _
+ | |   (_)
+ | |__  _ _ __ ___   _ __ ___   ___
+ | '_ \| | '__/ _ \ | '_ ` _ \ / _ \
+ | | | | | | |  __/ | | | | | |  __/
+ |_| |_|_|_|  \___| |_| |_| |_|\___|
 """
 
 
 def manage():
     from django.core.management import execute_from_command_line
-    print(SNAKE)
+    print(PROMPT)
     execute_from_command_line(sys.argv)
 
 
