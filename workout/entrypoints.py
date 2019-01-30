@@ -1,9 +1,5 @@
 #!/usr/bin/env python
-import os
 import sys
-
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'workout.project.settings')
-
 
 SNAKE = r"""
            /^\/^\
@@ -30,3 +26,12 @@ def manage():
     from django.core.management import execute_from_command_line
     print(SNAKE)
     execute_from_command_line(sys.argv)
+
+
+def wsgi(environ, start_response):
+    import django
+    from django.core.handlers.wsgi import WSGIHandler
+
+    django.setup(set_prefix=False)
+    application = WSGIHandler()
+    return application(environ, start_response)

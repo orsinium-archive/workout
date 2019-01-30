@@ -1,4 +1,4 @@
-from .entrypoints import manage
+from .entrypoints import manage, wsgi
 
 
-__all__ = ['manage']
+__all__ = ['manage', 'wsgi']

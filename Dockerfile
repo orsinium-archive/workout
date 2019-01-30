@@ -8,5 +8,6 @@ WORKDIR /opt/project
 RUN pip install -U pip
 RUN pip install -e .
 
+ENV DJANGO_SETTINGS_MODULE "workout.settings"
 ENTRYPOINT ["workout"]
 CMD ["runserver"]
